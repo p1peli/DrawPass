@@ -31,20 +31,22 @@ function Draw(event, canvas) {
 }
 
 async function convertToString() {
-    const inputString = JSON.stringify(coordinates) + ctx.fillStyle.toString(); // Adding color as Salt
-    console.log(inputString);
-    const encoder = new TextEncoder();
-    const data = encoder.encode(inputString);
+    if (coordinates.length > 0) {
+        const inputString = JSON.stringify(coordinates) + ctx.fillStyle.toString(); //Adding color as Salt (this is mostly for fun, since it doesn't add any noticeable entropy)
+        console.log(inputString);
+        const encoder = new TextEncoder();
+        const data = encoder.encode(inputString);
 
-    const hashBuffer = await crypto.subtle.digest('SHA-256', data); // Using SHA-256 for compression
-    const hashArray = Array.from(new Uint8Array(hashBuffer));
+        const hashBuffer = await crypto.subtle.digest('SHA-256', data); //Using SHA-256 to compress data to given length, max. 32 characters since with a bigger charset we need 8bits per character, if we use base64 encoding we could use 6bits per character to get around 44 characters
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
 
-    var password = "";
-    for (let i = 0; i < password_length; i++) {
-        password += charset[hashArray[i % hashArray.length] % charset.length];
+        var password = "";
+        for (let i = 0; i < password_length; i++) {
+            password += charset[hashArray[i % hashArray.length] % charset.length];
+        }
+
+        document.getElementById("password").innerHTML = password;
     }
-
-    document.getElementById("password").innerHTML = password;
 }
 
 // Buttons: 
