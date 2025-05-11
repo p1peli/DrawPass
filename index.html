@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Password Gen with additional entropy</title>
+    </header>
+    <body>
+        <canvas id="myCanvas" width="500" height="350" style="border:1px solid #000000;">
+         Your browser does not support the HTML canvas tag.
+        </canvas>
+        <p>Password: <span id="password"></span></p>
+        <p>Points: <span id="points"></span></p>
+
+        <button onclick="changeColor('#000000')">Black</button>
+        <button onclick="changeColor('#ffffff')">White</button>
+
+        <button onclick="changeColor('#a1002b')">Red</button>
+        <button onclick="changeColor('#fcba03')">Orange</button>
+        <button onclick="changeColor('#00ffae')">Mint</button>
+        <button onclick="changeColor('#2a1fff')">Blue</button>
+        <button onclick="changeColor('#a903fc')">Purple</button>
+
+        <br>
+        
+        <button onclick="clearCanvas(c)">Clear</button>
+        
+        <div class="slidecontainer">
+            <input type="range" min="2" max="10" value="2" class="slider" id="tipRange">
+        </div>
+        <div class="slidecontainer">
+            <input type="range" min="8" max="32" value="16" class="slider" id="lengthRange">
+        </div>
+
+    </body>
+    <script src="./index.js"></script>
+</html>
