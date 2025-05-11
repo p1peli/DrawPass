@@ -1,6 +1,6 @@
 # DrawPass
 Generating entropy based on user input to create secure, unpredictable passwords. <br>
-[🔗 Try it here](https://p1peli.github.io/DrawingPasswordGenerator/src/index.html) 
+[🔗 Try it here](https://p1peli.github.io/DrawPass/src/index.html) 
 
 **DrawPass** is a browser-based password generator that allows you to generate a high-entropy password, by drawing on a canvas. 
 Most traditional generators rely on pseudo-random number generators, which, while useful, are ultimately deterministic, and have already been exploited in the past [(e.g., Joe Grand)](https://www.youtube.com/watch?v=o5IySpAkThg).
