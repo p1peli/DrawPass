@@ -24,9 +24,10 @@ This is a proof of concept and mainly for fun. It should demonstrate how human-g
 
 ## 🧗🏼‍♂️ToDo
 [] Mobile optimization
-[] Numbers and special characters
+[x] Numbers and special characters
+[x] Fix slider synch on refresh
 [] Minimum numbers/ special characters
 [] New UI
-
+[] Canvas always white
 
 

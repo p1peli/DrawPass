@@ -1,10 +1,29 @@
-const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+//const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+const upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lowerChars = "abcdefghijklmnopqrstuvwxyz";
+const numberChars = "0123456789";
+const specialChars = "!@#$%^&*()_+[]{}|;:,.<>?"; 
+
+var includeNumbers = document.getElementById("includeNumbers").checked;
+var includeSpecial = document.getElementById("includeSpecial").checked; 
+
+function createCharset(nc, sc) {
+    var charset = upperChars + lowerChars; 
+    if (nc) {
+        charset += numberChars; 
+    }
+    if (sc) {
+        charset += specialChars; 
+    }
+
+    return charset
+}
 
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 var isDrawing = false;
-var tipSize = 2;
-var password_length = 16;
+var tipSize = document.getElementById("tipRange").value;
+var password_length = document.getElementById("lengthRange").value;
 var points = 0;
 ctx.fillStyle = "black";
 
@@ -33,13 +52,14 @@ function Draw(event, canvas) {
 async function convertToString() {
     if (coordinates.length > 0) {
         const inputString = JSON.stringify(coordinates) + ctx.fillStyle.toString(); //Adding color as Salt (this is mostly for fun, since it doesn't add any noticeable entropy)
-        console.log(inputString);
+        //console.log(inputString);
         const encoder = new TextEncoder();
         const data = encoder.encode(inputString);
 
         const hashBuffer = await crypto.subtle.digest('SHA-256', data); //Using SHA-256 to compress data to given length, max. 32 characters since with a bigger charset we need 8bits per character, if we use base64 encoding we could use 6bits per character to get around 44 characters
         const hashArray = Array.from(new Uint8Array(hashBuffer));
 
+        var charset = createCharset(includeNumbers, includeSpecial); 
         var password = "";
         for (let i = 0; i < password_length; i++) {
             password += charset[hashArray[i % hashArray.length] % charset.length];
@@ -97,5 +117,23 @@ var length_slider = document.getElementById("lengthRange");
 
 length_slider.oninput = function () {
     password_length = this.value;
-    convertToString();
+    console.log(password_length); 
+    convertToString();  
+}
+
+//Checkboxes: 
+var numberBox = document.getElementById("includeNumbers"); 
+
+numberBox.onchange = function () {
+    includeNumbers = this.checked; 
+    console.log("[Log] Changed includeNumbers to: ", includeNumbers)
+    convertToString(); 
+}
+
+var specialBox = document.getElementById("includeSpecial"); 
+
+specialBox.onchange = function() {
+    includeSpecial = this.checked; 
+    console.log("[Log] Changed includeSpecial to: ", includeSpecial)
+    convertToString(); 
 }

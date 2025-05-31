@@ -12,19 +12,32 @@
         <p>Password: <span id="password"></span></p>
         <p>Points: <span id="points"></span></p>
 
-        <button onclick="changeColor('#000000')">Black</button>
-        <button onclick="changeColor('#ffffff')">White</button>
-
-        <button onclick="changeColor('#a1002b')">Red</button>
-        <button onclick="changeColor('#fcba03')">Orange</button>
-        <button onclick="changeColor('#00ffae')">Mint</button>
-        <button onclick="changeColor('#2a1fff')">Blue</button>
-        <button onclick="changeColor('#a903fc')">Purple</button>
+        <div class="colorcontainer">
+            <button onclick="changeColor('#000000')">Black</button>
+            <button onclick="changeColor('#ffffff')">White</button>
+    
+            <button onclick="changeColor('#a1002b')">Red</button>
+            <button onclick="changeColor('#fcba03')">Orange</button>
+            <button onclick="changeColor('#00ffae')">Mint</button>
+            <button onclick="changeColor('#2a1fff')">Blue</button>
+            <button onclick="changeColor('#a903fc')">Purple</button>
+    
+        </div>
 
         <br>
         
         <button onclick="clearCanvas(c)">Clear</button>
         
+        <br>
+
+        <div class="charsetcontainer">
+            <input type="checkbox" id="includeNumbers">
+            <label for="includeNumbers">0-9</label><br>
+
+            <input type="checkbox" id="includeSpecial">
+            <label for="includeSpecial">!@#$</label><br>
+        </div>
+
         <div class="slidecontainer">
             <input type="range" min="2" max="10" value="2" class="slider" id="tipRange">
         </div>
