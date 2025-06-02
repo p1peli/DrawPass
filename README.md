@@ -27,6 +27,7 @@ This is a proof of concept and mainly for fun. It should demonstrate how human-g
 - [x] Numbers and special characters
 - [x] Fix slider synch on refresh
 - [] New UI
+- [] Make color selection visible
 - [x] Canvas always white
 - [] Advanced Settings - import charset
 - [] Minimum numbers/ special characters
