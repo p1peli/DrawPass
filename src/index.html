@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <canvas id="myCanvas" width="500" height="350" style="border:1px solid #000000;">
+        <canvas class="can" id="myCanvas" width="500" height="350">
          Your browser does not support the HTML canvas tag.
         </canvas>
         <p>Password: <span id="password"></span></p>
@@ -39,9 +39,11 @@
         </div>
 
         <div class="slidecontainer">
+            <label for="tipRange">Tip Size</label>
             <input type="range" min="2" max="10" value="2" class="slider" id="tipRange">
         </div>
         <div class="slidecontainer">
+            <label for="tipRange">Pwd Length</label>
             <input type="range" min="8" max="32" value="16" class="slider" id="lengthRange">
         </div>
 

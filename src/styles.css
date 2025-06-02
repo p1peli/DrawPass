@@ -1,3 +1,15 @@
 body {
-    background-color: aliceblue;
+    background-color: whitesmoke;
 }
+
+.can {
+    border:1px solid #000000;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.slidecontainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }

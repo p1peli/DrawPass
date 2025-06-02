@@ -65,7 +65,7 @@ async function convertToString() {
             password += charset[hashArray[i % hashArray.length] % charset.length];
         }
 
-        document.getElementById("password").innerHTML = password;
+        document.getElementById("password").textContent = password;
     }
 }
 

@@ -26,8 +26,10 @@ This is a proof of concept and mainly for fun. It should demonstrate how human-g
 - [] Mobile optimization
 - [x] Numbers and special characters
 - [x] Fix slider synch on refresh
-- [] Minimum numbers/ special characters
 - [] New UI
-- [] Canvas always white
+- [x] Canvas always white
+- [] Advanced Settings - import charset
+- [] Minimum numbers/ special characters
+- [] Create password phrases (optional)
 
 
