@@ -13,3 +13,9 @@ body {
     align-items: center;
     gap: 10px;
   }
+
+.colorcontainer button.selected-color {
+    border: 2.5px solid black;
+    border-radius: 5px;
+}
+  

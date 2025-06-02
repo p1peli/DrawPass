@@ -70,10 +70,16 @@ async function convertToString() {
 }
 
 // Buttons: 
+const colorButtons = document.querySelectorAll(".colorcontainer button");
 
 function changeColor(clr) {
     ctx.fillStyle = clr;
     console.log("[Log] Changed color to: ", clr);
+
+    // Deselect all buttons
+    colorButtons.forEach(btn => btn.classList.remove("selected-color"));
+
+    event.target.classList.add("selected-color");
 }
 
 function clearCanvas(canvas) {
