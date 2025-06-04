@@ -24,6 +24,7 @@ This is a proof of concept and mainly for fun. It should demonstrate how human-g
 
 ## 🧗🏼‍♂️ToDo
 - [] Mobile optimization
+- [] Browser Extension
 - [x] Numbers and special characters
 - [x] Fix slider synch on refresh
 - [] New UI
