@@ -25,6 +25,8 @@ var isDrawing = false;
 var tipSize = document.getElementById("tipRange").value;
 var password_length = document.getElementById("lengthRange").value;
 var points = 0;
+document.getElementById("points").innerHTML = points;
+
 ctx.fillStyle = "black";
 
 const coordinates = [];

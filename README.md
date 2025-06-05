@@ -33,7 +33,7 @@ This is a proof of concept and mainly for fun. It should demonstrate how human-g
 - [ ] Advanced Settings - import charset
 - [ ] Minimum numbers/ special characters
 - [ ] Create password phrases (optional)
-- [ ] Fix points not 0 at start
+- [x] Fix points not 0 at start
 - [ ] Fix first color snych on refresh
 
 
