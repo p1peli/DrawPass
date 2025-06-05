@@ -29,6 +29,7 @@ document.getElementById("points").innerHTML = points;
 
 ctx.fillStyle = "black";
 
+
 const coordinates = [];
 
 function getMousePos(canvas, evt) {
@@ -93,8 +94,8 @@ function clearCanvas(canvas) {
     console.log("[Log] Cleared Canvas");
 }
 
-// Mouse Controls: 
 
+// Mouse Controls: 
 c.addEventListener('mousedown', function () {
     isDrawing = true;
 });
@@ -114,7 +115,6 @@ c.addEventListener('mousemove', function (event) {
 });
 
 // Sliders: 
-
 var tip_slider = document.getElementById("tipRange");
 
 tip_slider.oninput = function () {
