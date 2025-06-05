@@ -15,7 +15,7 @@ body {
   }
 
 .colorcontainer button.selected-color {
-    border: 2.5px solid black;
+    border: 2.5px solid lightskyblue;
     border-radius: 5px;
 }
   

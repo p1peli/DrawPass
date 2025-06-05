@@ -94,6 +94,24 @@ function clearCanvas(canvas) {
     console.log("[Log] Cleared Canvas");
 }
 
+//Copy Pwd to Clipboard
+function copyPwd() {
+    var password = document.getElementById("password").textContent; 
+
+    if (!password) {
+        console.warn("[Log] No password to copy.");
+        return;
+    }
+
+    navigator.clipboard.writeText(password)
+    .then(() => {
+        console.log("[Log] Copied password to clipboard!");
+    })
+    .catch(err => {
+        console.error("[Log] Error while copying: ", err);
+    });
+}
+
 
 // Mouse Controls: 
 c.addEventListener('mousedown', function () {
@@ -113,6 +131,9 @@ c.addEventListener('mousemove', function (event) {
         Draw(event, c);
     }
 });
+
+//Touch Controls: 
+//Coming soon...
 
 // Sliders: 
 var tip_slider = document.getElementById("tipRange");

@@ -9,18 +9,18 @@
         <canvas class="can" id="myCanvas" width="500" height="350">
          Your browser does not support the HTML canvas tag.
         </canvas>
-        <p>Password: <span id="password"></span></p>
+        <p>Password: <span id="password" style="cursor: pointer" onclick="copyPwd()"></span></p>
         <p>Points: <span id="points"></span></p>
 
         <div class="colorcontainer">
-            <button class="selected-color" onclick="changeColor('#000000', this)">Black</button>
-            <button onclick="changeColor('#ffffff', this)">White</button>
+            <button class="selected-color" onclick="changeColor('#000000')">Black</button>
+            <button onclick="changeColor('#ffffff')">White</button>
     
-            <button onclick="changeColor('#a1002b', this)">Red</button>
-            <button onclick="changeColor('#fcba03', this)">Orange</button>
-            <button onclick="changeColor('#00ffae', this)">Mint</button>
-            <button onclick="changeColor('#2a1fff', this)">Blue</button>
-            <button onclick="changeColor('#a903fc', this)">Purple</button>
+            <button onclick="changeColor('#a1002b')">Red</button>
+            <button onclick="changeColor('#fcba03')">Orange</button>
+            <button onclick="changeColor('#00ffae')">Mint</button>
+            <button onclick="changeColor('#2a1fff')">Blue</button>
+            <button onclick="changeColor('#a903fc')">Purple</button>
     
         </div>
 
