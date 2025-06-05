@@ -31,6 +31,7 @@ This is a proof of concept and mainly for fun. It should demonstrate how human-g
 - [x] Make color selection visible
 - [x] Canvas always white
 - [ ] Advanced Settings - import charset
+- [ ] Make Advanced settings dropdown
 - [ ] Minimum numbers/ special characters
 - [ ] Create password phrases (optional)
 - [x] Fix points not 0 at start
