@@ -146,7 +146,6 @@ var length_slider = document.getElementById("lengthRange");
 
 length_slider.oninput = function () {
     password_length = this.value;
-    console.log(password_length); 
     convertToString();  
 }
 
