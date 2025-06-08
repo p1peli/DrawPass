@@ -6,56 +6,57 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <canvas class="can" id="myCanvas" width="500" height="350">
-         Your browser does not support the HTML canvas tag.
-        </canvas>
-        <p>Password: <span id="password" style="cursor: pointer" onclick="copyPwd()"></span></p>
-        <p>Points: <span id="points"></span></p>
+        <div class="maincontainer">
+            <canvas class="can" id="myCanvas" width="500" height="350">
+            Your browser does not support the HTML canvas tag.
+            </canvas>
+            <p>Password: <span id="password" style="cursor: pointer" onclick="copyPwd()"></span></p>
+            <p>Points: <span id="points"></span></p>
 
-        <div class="colorcontainer">
-            <button class="selected-color" onclick="changeColor('#000000')">Black</button>
-            <button onclick="changeColor('#ffffff')">White</button>
-    
-            <button onclick="changeColor('#a1002b')">Red</button>
-            <button onclick="changeColor('#fcba03')">Orange</button>
-            <button onclick="changeColor('#00ffae')">Mint</button>
-            <button onclick="changeColor('#2a1fff')">Blue</button>
-            <button onclick="changeColor('#a903fc')">Purple</button>
-    
-        </div>
-
-        <br>
+            <div class="colorcontainer">
+                <button class="selected-color" onclick="changeColor('#000000')">Black</button>
+                <button onclick="changeColor('#ffffff')">White</button>
         
-        <button onclick="clearCanvas(c)">Clear</button>
+                <button onclick="changeColor('#a1002b')">Red</button>
+                <button onclick="changeColor('#fcba03')">Orange</button>
+                <button onclick="changeColor('#00ffae')">Mint</button>
+                <button onclick="changeColor('#2a1fff')">Blue</button>
+                <button onclick="changeColor('#a903fc')">Purple</button>
         
-        <br>
+            </div>
 
-        <div class="charsetcontainer">
-            <input type="checkbox" id="includeNumbers">
-            <label for="includeNumbers">0-9</label><br>
+            <br>
+            
+            <button onclick="clearCanvas(c)">Clear</button>
+            
+            <br>
 
-            <input type="checkbox" id="includeSpecial">
-            <label for="includeSpecial">!@#$</label><br>
+            <div class="charsetcontainer">
+                <input type="checkbox" id="includeNumbers">
+                <label for="includeNumbers">0-9</label><br>
+
+                <input type="checkbox" id="includeSpecial">
+                <label for="includeSpecial">!@#$</label><br>
+            </div>
+
+            <div class="slidecontainer">
+                <label for="tipRange">Tip Size</label>
+                <input type="range" min="2" max="10" value="2" class="slider" id="tipRange">
+            </div>
+            <div class="slidecontainer">
+                <label for="tipRange">Pwd Length</label>
+                <input type="range" min="8" max="32" value="16" class="slider" id="lengthRange">
+            </div>
+
+            <br>
+
+            <a id="toggleAdvanced" class="toggle-link">
+                Advanced Settings ▼
+            </a>
+
+            <!--Implement Advanced settings container-->
+            
         </div>
-
-        <div class="slidecontainer">
-            <label for="tipRange">Tip Size</label>
-            <input type="range" min="2" max="10" value="2" class="slider" id="tipRange">
-        </div>
-        <div class="slidecontainer">
-            <label for="tipRange">Pwd Length</label>
-            <input type="range" min="8" max="32" value="16" class="slider" id="lengthRange">
-        </div>
-
-        <br>
-
-        <a id="toggleAdvanced" class="toggle-link">
-            Advanced Settings ▼
-        </a>
-
-        <!--Implement Advanced settings container-->
-          
-
     </body>
     <script src="./index.js"></script>
 </html>

@@ -1,9 +1,22 @@
+:root {
+    --primary-color: #0077cc;
+    --primary-hover: #005fa3;
+    --accent-color: #ff4081;
+    --bg-color: #f5f5f5;
+    --text-color: #222;
+}  
+
 body {
     background-color: whitesmoke;
 }
 
+.maincontainer {
+    border: 1px solid #000000;
+    border-radius: 15px;
+}
+
 .can {
-    border:1px solid #000000;
+    border: 1px solid #000000;
     background-color: white;
     border-radius: 15px;
 }
