@@ -34,10 +34,12 @@ const coordinates = [];
 
 function getMousePos(canvas, evt) {
     var rect = canvas.getBoundingClientRect();
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
     return {
-        x: evt.clientX - rect.left,
-        y: evt.clientY - rect.top
-    };
+      x: (evt.clientX - rect.left) * scaleX,
+      y: (evt.clientY - rect.top) * scaleY
+    };    
 }
 
 function Draw(event, canvas) {
