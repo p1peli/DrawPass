@@ -36,5 +36,6 @@ This is a proof of concept and mainly for fun. It should demonstrate how human-g
 - [ ] Create password phrases (optional)
 - [x] Fix points not 0 at start
 - [x] Fix selected default color
+- [ ] Darkmode
 
 
