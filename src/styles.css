@@ -14,9 +14,24 @@ body {
 
 .maincontainer {
     border: 1px solid var(--border-color);
-    border-radius: 15px;
-    max-width: 35vw;
-    background-color: var(--bg-color);
+    border-radius: 17px;
+    background-color: var(--bg);
+
+    padding: 1rem;
+    width: 100%;
+    max-width: 600px;
+
+    display: flex;
+    flex-direction: column;
+
+
+    gap: .5rem;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    /* No width/height in CSS */
 }
 
 .can {
