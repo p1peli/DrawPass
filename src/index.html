@@ -11,8 +11,10 @@
             <canvas class="can" id="myCanvas" width="500" height="350">
             Your browser does not support the HTML canvas tag.
             </canvas>
-            <p>Password: <span id="password" style="cursor: pointer" onclick="copyPwd()"></span></p>
-            <p>Points: <span id="points"></span></p>
+            <div class="output">
+                <p>Password: <span id="password" style="cursor: pointer" onclick="copyPwd()"></span></p>
+                <p>Points: <span id="points"></span></p>
+            </div>
 
             <div class="colorcontainer">
                 <button class="selected-color" onclick="changeColor('#000000')">Black</button>
@@ -28,7 +30,7 @@
 
             <br>
             
-            <button onclick="clearCanvas(c)">Clear</button>
+            <button onclick="clearCanvas(c)" class="clear">Clear</button>
             
             <br>
 

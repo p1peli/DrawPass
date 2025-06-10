@@ -27,7 +27,7 @@ This is a proof of concept and mainly for fun. It should demonstrate how human-g
 - [ ] Browser Extension
 - [x] Numbers and special characters
 - [x] Fix slider synch on refresh
-- [ ] New UI
+- [x] New UI
 - [x] Make color selection visible
 - [x] Canvas always white
 - [ ] Advanced Settings - import charset

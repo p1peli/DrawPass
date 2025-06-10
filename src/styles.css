@@ -1,8 +1,6 @@
 :root {
-    --primary-color: #0077cc;
-    --primary-hover: #005fa3;
-    --accent-color: #ff4081;
-    --bg-color: #f5f5f5;
+    --accent-color: lightgray;
+    --bg-color: #ffffff;
 
     --border-color: #000000; 
     --text-color: #222;
@@ -30,6 +28,8 @@ body {
     padding: .5rem; 
 
     overflow: hidden; /*Prevents scrolling*/
+
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 @keyframes CircularGradientAnimation {
@@ -41,9 +41,9 @@ body {
 }
 
 .maincontainer {
-    border: 1px solid var(--border-color);
+    /*border: 1px solid var(--border-color);*/
     border-radius: 17px;
-    background-color: white;
+    background-color: var(--bg-color);
 
     padding: 1rem;
     width: 100%;
@@ -66,9 +66,10 @@ canvas {
 }
 
 .can {
-    border: 1px solid var(--border-color);
-    background-color: white;
+    border: 1.5px solid var(--accent-color);
+    background-color: var(--bg-color);
     border-radius: 15px;
+    margin-bottom: 10px;
 }
 
 .slidecontainer {
@@ -78,7 +79,30 @@ canvas {
   }
 
 .colorcontainer button.selected-color {
-    border: 2.5px solid lightskyblue;
+    border: 2.5px solid var(--accent-color);
     border-radius: 5px;
 }
+
+button {
+    background-color: white;
+    border: .5px solid lightgray;
+    border-radius: 5px;
+    min-width: 75px;
+    min-height: 35px;
+}
+
+.clear {
+    background-color: white;
+}
+
+.clear:hover {
+    background-color: lightgray;
+    color: white; 
+}
+
+.maincontainer p {
+    margin: 0; 
+    margin-bottom: 10px;
+}
+
   
