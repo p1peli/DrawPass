@@ -96,7 +96,7 @@ function changeColor(clr) {
 }
 
 function clearCanvas(canvas) {
-    ctx.clearRect(0, 0, canvas.getBoundingClientRect().width, canvas.getBoundingClientRect().height);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     coordinates.length = 0;
     points = 0;
     document.getElementById("password").innerHTML = "";
