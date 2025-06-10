@@ -10,12 +10,29 @@
 
 body {
     background-color: whitesmoke;
+
+    background-image: radial-gradient(circle at center,
+        hsl(30, 100%, 85%),
+        hsl(120, 60%, 85%),
+        hsl(240, 70%, 85%),
+        hsl(300, 70%, 85%)
+    );
+    background-size: 300% 300%;
+    animation: CircularGradientAnimation 20s infinite linear;
+}
+
+@keyframes CircularGradientAnimation {
+    0% { background-position: 0% 0%; }
+    25% { background-position: 100% 0%; }
+    50% { background-position: 100% 100%; }
+    75% { background-position: 0% 100%; }
+    100% { background-position: 0% 0%; }
 }
 
 .maincontainer {
     border: 1px solid var(--border-color);
     border-radius: 17px;
-    background-color: var(--bg);
+    background-color: white;
 
     padding: 1rem;
     width: 100%;
@@ -24,8 +41,9 @@ body {
     display: flex;
     flex-direction: column;
 
-
     gap: .5rem;
+
+    z-index: 1; 
 }
 
 canvas {
