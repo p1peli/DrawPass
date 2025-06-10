@@ -33,17 +33,25 @@ ctx.fillStyle = "black";
 const coordinates = [];
 
 function getMousePos(canvas, evt) {
-    var rect = canvas.getBoundingClientRect();
+    const rect = canvas.getBoundingClientRect();
+
+    const clientX = evt.clientX || (evt.touches && evt.touches[0] ? evt.touches[0].clientX : 0);
+    const clientY = evt.clientY || (evt.touches && evt.touches[0] ? evt.touches[0].clientY : 0);
+
     const scaleX = canvas.width / rect.width;
     const scaleY = canvas.height / rect.height;
+
     return {
-      x: (evt.clientX - rect.left) * scaleX,
-      y: (evt.clientY - rect.top) * scaleY
+        x: (clientX - rect.left) * scaleX,
+        y: (clientY - rect.top) * scaleY
     };    
 }
 
 function Draw(event, canvas) {
+    event.preventDefault();
+
     var pos = getMousePos(canvas, event);
+
     ctx.beginPath();
     ctx.arc(pos.x, pos.y, tipSize, 0, Math.PI * 2);
     ctx.fill();
@@ -135,7 +143,26 @@ c.addEventListener('mousemove', function (event) {
 });
 
 //Touch Controls: 
-//Coming soon...
+// Touch Controls: (Mobile support)
+c.addEventListener('touchstart', function (event) {
+    isDrawing = true;
+    Draw(event, c); // Draw initial point on touch
+}, { passive: false }); // Use { passive: false } to allow preventDefault
+
+c.addEventListener('touchend', function () {
+    isDrawing = false;
+});
+
+c.addEventListener('touchcancel', function () { // When a touch is interrupted
+    isDrawing = false;
+});
+
+c.addEventListener('touchmove', function (event) {
+    if (isDrawing) {
+        Draw(event, c);
+    }
+}, { passive: false }); // Use { passive: false } to allow preventDefault
+
 
 // Sliders: 
 var tip_slider = document.getElementById("tipRange");

@@ -23,7 +23,7 @@ This is a proof of concept and mainly for fun. It should demonstrate how human-g
 **Limited to 32 characters:** Using SHA-256 for compression with 8 bits per character, we can generate passwords with a maximum length of 32 characters (this could be adjusted by using different hashing algorithms).
 
 ## 🧗🏼‍♂️ToDo
-- [ ] Mobile optimization
+- [x] Mobile optimization
 - [ ] Browser Extension
 - [x] Numbers and special characters
 - [x] Fix slider synch on refresh

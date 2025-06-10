@@ -58,6 +58,7 @@ body {
 canvas {
     display: block;
     width: 100%;
+    min-height: 250px;
     /* No width/height in CSS */
 }
 
