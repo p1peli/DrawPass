@@ -142,9 +142,8 @@ c.addEventListener('mousemove', function (event) {
     }
 });
 
-//Touch Controls: 
 // Touch Controls: (Mobile support)
-myCanvas.addEventListener('touchstart', function (event) {
+c.addEventListener('touchstart', function (event) {
     event.preventDefault();
     isDrawing = true;
     Draw(event, myCanvas);
@@ -159,6 +158,7 @@ c.addEventListener('touchcancel', function () { // When a touch is interrupted
 });
 
 c.addEventListener('touchmove', function (event) {
+    event.preventDefault();
     if (isDrawing) {
         Draw(event, c);
     }
