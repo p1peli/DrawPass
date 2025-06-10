@@ -144,10 +144,11 @@ c.addEventListener('mousemove', function (event) {
 
 //Touch Controls: 
 // Touch Controls: (Mobile support)
-c.addEventListener('touchstart', function (event) {
+myCanvas.addEventListener('touchstart', function (event) {
+    event.preventDefault();
     isDrawing = true;
-    Draw(event, c); // Draw initial point on touch
-}, { passive: false }); // Use { passive: false } to allow preventDefault
+    Draw(event, myCanvas);
+}, { passive: false }); // Ensure this is still { passive: false }
 
 c.addEventListener('touchend', function () {
     isDrawing = false;
