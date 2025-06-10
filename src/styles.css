@@ -19,6 +19,15 @@ body {
     );
     background-size: 300% 300%;
     animation: CircularGradientAnimation 20s infinite linear;
+
+
+    /* Flexbox for centering the main container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: .5rem; 
 }
 
 @keyframes CircularGradientAnimation {
